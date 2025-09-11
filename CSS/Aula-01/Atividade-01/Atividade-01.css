@@ -1,0 +1,35 @@
+body
+{
+    background-color: rgb(0, 255, 255);
+}
+h1
+{
+    color: green; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+li:hover
+{
+    color : red;
+    font-family:'Courier New', Courier, monospace;
+}
+.inf:hover
+{
+    color: darkred;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+button
+{
+    background-color: red;
+    color: pink;
+}
+.ferias
+{
+    width: 350px;
+    height: 120px;
+    text-align: justify;
+    margin: auto;
+    border: 1px solid black;
+    background-color: rgb(0, 180, 240);
+    border-radius: 10px;
+}

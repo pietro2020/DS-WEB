@@ -1,0 +1,47 @@
+/* COMENTÁRIO CSS */
+/*SELETORES DE CSS*/
+
+/* SELETOR UNIVERSAL
+*
+{
+    color: brown;
+}
+*/
+
+body
+{
+    /*código da cor em hexadecimal*/
+    background: linear-gradient(to right, red 20%, yellow 70%, green)
+}
+
+h1
+{
+    color: lightblue;
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+}
+
+/*  Seletor Tag HTML   */
+p
+{
+    /*Código da cor no formato rgb*/
+    color: rgb(10,240,100);
+}
+ul
+{
+    color: green;
+}
+/*   Seletor class   */
+.parágrafo-bolha
+{
+    color: rgba(10,240,100,0.1);
+}
+/*   Seletor ID   */
+#parágrafo-henry
+{
+    color: red;
+}

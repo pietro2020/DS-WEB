@@ -1,0 +1,92 @@
+body
+{
+    margin: 0px;
+    background-color: darkgray;
+}
+.head
+{
+    display: flex;
+    background-color: gray;
+}
+.news
+{
+    height: 150px;
+    width: auto;
+    margin: 10px;
+}
+h1
+{
+    margin: 0 auto;
+    align-self: center;
+    font-size: 80px;
+    font-family: sans-serif;
+}
+h2
+{
+    margin: 10px 8px;
+    align-self: center;
+    text-align: justify;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+.mais
+{
+    margin: 30px;
+    align-self: flex-end;
+}
+.noticia1
+{
+    width: 1000px;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.noticia2
+{
+    width: 1000px;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+img
+{
+    width: 480px;
+}
+div
+{
+    display: flex;
+}
+a
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table
+{
+    margin: 0px auto 40px auto;
+}
+table, th, td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+th 
+{
+    background: #3271f7;
+    color: white;
+    font-size: 18px;
+}
+th, td 
+{
+    padding: 16px;
+    text-align: center;
+}
+tr:nth-child(even) 
+{ 
+    background-color: #415a77;
+}
+tr:nth-child(odd) 
+{ 
+    background-color: #778da9;
+}

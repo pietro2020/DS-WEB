@@ -1,0 +1,243 @@
+/*px (pixel)
+
+Unidade absoluta (fixa).
+Não depende do elemento pai, nem do tamanho da tela.
+Muito usado em design quando se quer algo exato.
+*/
+p {
+font-size: 16px; /* tamanho fixo */
+}
+
+
+/*em
+
+Tipos de Medidas e Formatação de Textos 1
+
+Unidade relativa ao tamanho da fonte do elemento pai.
+Se o pai tem font-size: 16px , então 1em = 16px .
+2em = duas vezes o tamanho do pai.*/
+#pai{
+font-size: 16px;
+}
+#filho{
+font-size: 2em;
+}
+
+
+/*rem (root em)
+Unidade relativa ao tamanho da fonte do elemento raiz ( html ).
+Mais previsível que o em , pois ignora os elementos pai.*/
+
+html {
+font-size: 16px;
+}
+p {
+font-size: 2rem; /* 32px (2 × 16px) */
+}
+
+
+/*% (porcentagem)
+Unidade relativa ao elemento pai.
+
+Tipos de Medidas e Formatação de Textos 2
+
+Usada em largura, altura, margens, padding e até fontes.*/
+
+div {
+width: 50%; /* metade da largura do pai */
+}
+p {
+font-size: 120%; /* 120% do tamanho do pai */
+}
+
+/*Fonte ( font-family )
+Define a tipografia usada.*/
+p {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Tamanho da fonte ( font-size )
+Pode usar px , em , rem , % etc.*/
+h1 {
+font-size: 32px;
+}
+p {
+font-size: 1.2em;
+}
+
+/*Peso da fonte ( font-weight )
+Deixa o texto mais fino ou mais grosso.*/
+p {
+font-weight: bold; /* ou 100 a 900 */
+}
+
+/*Estilo da fonte ( font-style )*/
+p {
+font-style: italic;
+}
+
+/*Transformação do texto ( text-transform )*/
+h2 {
+text-transform: uppercase; /* maiúsculas */
+}
+p {
+text-transform: capitalize; /* Primeira Letra Maiúscula */
+}
+
+/*Alinhamento do texto ( text-align )*/
+h1 {
+text-align: center;
+}
+p {
+text-align: justify;
+}
+
+/*Decoração do texto ( text-decoration )*/
+a {
+text-decoration: none; /* remove sublinhado */
+}
+p {
+text-decoration: underline;
+}
+
+/*Espaçamento entre letras ( letter-spacing )*/
+h1 {
+letter-spacing: 3px;
+}
+
+/*Espaçamento entre linhas ( line-height )*/
+p {
+line-height: 1.8;
+}
+
+/*Espaçamento entre palavras ( word-spacing )*/
+p {
+word-spacing: 10px;
+}
+
+/*Sombra no texto ( text-shadow )*/
+h1 {
+color: white;
+text-shadow: 2px 2px 4px black;
+}
+
+/*Formatação de elementos de imagem
+Estrutura básica
+<img src="foto.jpg" alt="Descrição da imagem">
+src → caminho do arquivo.
+alt → texto alternativo (acessibilidade + SEO).
+
+Largura e altura*/
+img {
+width: 300px;
+height: auto; /* mantém a proporção */
+}
+
+/*Sempre usar height: auto para evitar distorção.
+Borda*/
+img {
+border: 5px dotted black;
+}
+/*Mais sobre bordas: https://www.w3schools.com/css/css_border.asp
+
+Bordas arredondadas ( border-radius )*/
+img {
+border-radius: 10px; /* cantos arredondados */
+}
+img.redonda {
+    border-radius: 50%; /* deixa a imagem redonda */
+}
+    
+/*Sombras ( box-shadow )*/
+img {
+box-shadow: 5px 5px 10px gray;
+}    
+
+/*Opacidade e efeitos visuais*/
+img {
+opacity: 0.8; /* 80% visível */
+}
+img:hover {
+opacity: 1; /* volta ao normal quando passa o mouse */
+}    
+
+/*Alinhamento*/
+img {
+display: block;
+margin: 0 auto; /* centraliza */
+}    
+
+/*Imagens responsivas
+Para adaptar ao tamanho da tela:*/
+img {
+    max-width: 100%;  
+    height: auto;
+}
+
+/*Filtro de efeitos ( filter )*/
+img {
+filter: grayscale(100%); /* preto e branco */
+}
+img:hover {
+filter: brightness(120%); /* clareia ao passar o mouse */
+}
+img {
+filter: blur(5px);
+}
+
+/*Bordas*/
+table, th, td {
+border: 1px solid black;
+}
+
+/*Bordas colapsadas (bordas unidas)*/
+table {
+border-collapse: collapse; /* junta as bordas */
+}
+
+/*Espaçamento interno e alinhamento*/
+th, td {
+padding: 10px; /* espaço interno */
+text-align: center; /* centralizar texto */
+}
+
+/*Cor de fundo*/
+th {
+background-color: #333;
+color: white;
+}
+td {
+background-color: #f2f2f2;
+}
+
+/*Listras (zebra table)*/
+tr:nth-child(even) { /* linhas pares */
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) { /* linhas ímpares */
+    background-color: #fff;
+}
+/*No CSS, quando usamos o seletor nth-child() , podemos aplicar estilos de acordo
+com a ordem dos elementos dentro do pai (no caso, <tr> dentro do <table> ).
+Significado de even e odd :
+even = linhas pares
+Linha 2, 4, 6, 8...
+Em inglês, even significa par.
+odd = linhas ímpares
+Linha 1, 3, 5, 7...
+Em inglês, odd significa ímpar.*/
+
+/*Efeito hover*/
+tr:hover {
+    background-color: #ddd;
+}
+
+/*Largura e altura da tabela*/
+table {
+    width: 100%; /* ocupa toda a largura */
+}
+
+/*Formatação de Imagens, Estilização de tabelas 5*/
+th, td {
+    height: 40px; /* altura das células */
+}

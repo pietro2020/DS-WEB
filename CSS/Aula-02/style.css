@@ -1,0 +1,47 @@
+h1{
+    color: black;
+    text-shadow: 2px 2px 4px black;
+}
+h1
+{
+    font-family: "comic neue";
+}
+p
+{
+    font-family: roboto;
+}
+img 
+{
+    border: 2px solid black;
+    border-radius: 50%;
+    opacity: 0.9;
+    filter: grayscale(30%);
+    
+}
+img:hover
+{
+    filter: brightness(120%);
+    filter: blur(1px);
+}
+table, th, td 
+{
+    border: 1px solid black;
+}
+table 
+{
+    border-collapse: collapse; /* junta as bordas */
+}
+th, td 
+{
+    padding: 10px; /* espaço interno */
+    text-align: center; /* centralizar texto */
+}
+th 
+{
+    background-color: #333;
+    color: white;
+}
+td 
+{
+    background-color: #f2f2f2;
+}
