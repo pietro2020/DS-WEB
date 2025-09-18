@@ -1,0 +1,51 @@
+.pai{
+    width: 500px;
+    margin: 0 auto;
+}
+.pai > *{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    margin: 4px;
+}
+.pai>*:hover{
+    color: white;
+}
+.d1{
+    background-color: #ee9b00;
+    border: 3px solid black
+}
+.d2{
+    background-color: #ca6702;
+    border: 3px dotted black
+}
+.d3{
+    background-color: #bb3e03;
+    border: 3px double black
+}
+.d4{
+    background-color: #ca6702;
+    border: 3px dotted black
+}
+.d5{
+    background-color: #bb3e03;
+    border: 3px solid black
+}
+.d6{
+    background-color: #ae2012;
+    border: 3px dotted black
+}
+.d7{
+    background-color: #bb3e03;
+    border: 3px double black
+}
+.d8{
+    background-color: #ae2012;
+    border: 3px dotted black
+}
+.d9{
+    background-color: #9b2226;
+    border: 3px solid black
+}

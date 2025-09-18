@@ -1,0 +1,16 @@
+.div > *{
+    background-color: aqua;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin: 2.5px;
+    text-align: center;
+    align-content: center;
+}
+div{
+    display: table;
+    background-color: blue;
+    padding: 10px;
+    width: 520;
+    margin: 0 auto;
+}

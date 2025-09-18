@@ -1,0 +1,13 @@
+div{
+    display: inline-block;
+    margin: 5px;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+}
+.div1{
+    background-color: blue;
+}
+.div2{
+    background-color: red;
+}

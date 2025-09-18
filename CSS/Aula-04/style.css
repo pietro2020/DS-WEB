@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+}
+.box{
+    display: inline-block;
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    padding: 10px 30px;   
+    border: 2px solid black;
+    margin: 10px 50px; 
+    /*margin: 10px 0px 10px 0px; 
+    no sentido horário*/
+    text-align: center;
+    align-content: center;
+}
+.box2{
+    display: inline-block;
+    background-color: brown;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px 50px;
+}
+.divCenter{
+    margin: 0 auto;
+    width: 300px;
+}
+.conteudo1{
+    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
+}
+.conteudo2{
+    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
+}
