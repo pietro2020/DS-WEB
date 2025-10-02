@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    background-color: rgb(181, 181, 255);
+}
+.menu{
+    background-color: rgb(43, 43, 255);
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu>*{
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+    margin: 0% 5%
+}
+.menu>*:hover{
+    color: rgb(63, 63, 63);
+    text-decoration: underline;
+}
+h1{
+    margin-top: 100px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table, th, td{
+    border: 2px solid rgb(43, 43, 255);
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+    margin: 0 auto;
+}
+th, td{
+    padding: 10px 10px;
+    text-align: center;
+}
+th{
+    background-color: rgb(91, 91, 252) ;
+}
+tr:nth-child(even){ 
+    background-color: rgb(255, 255, 163);
+}
+tr:nth-child(odd){
+    background-color: rgb(128, 255, 128);
+}

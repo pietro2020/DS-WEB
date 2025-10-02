@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reservas.css">
+    <title>Reservas</title>
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Página Inicial</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="reservas.html">Reservas</a>
+    </div>
+    <div class="conteudo">
+        <center><h1>Faça sua reserva aqui:</h1></center>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required maxlength="50" placeholder="Digite seu Nome"><br>
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" required placeholder="Digite seu Número"><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail"><br>
+            <label for="pessoas">Quantidade de pessoas:</label>
+            <input type="number" id="pessoas" name="pessoas" required placeholder="Digite a quantidade de pessoas" min="1"><br>
+            <label for="mensagem">Deixe uma mensagem para nós:</label><br>
+            <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem"></textarea><br>
+            <input class="enviar" type="submit" placeholder="Enviar">
+        </form>
+    </div>
+</body>
+</html>
