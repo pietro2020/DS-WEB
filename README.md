@@ -11,13 +11,13 @@ Aqui você encontrará:
 - Projetos de **HTML e CSS**
 - Exercícios de **JavaScript**
 - Práticas de **layout e design responsivo**
-- Pequenos projetos para **treinar habilidades de front-end**
+- Pequenos projetos para **treinar habilidades de programação web**
 
 ---
 
 ## Objetivo
 
-O objetivo do `DS-WEB` é **documentar meu aprendizado** em desenvolvimento web e registrar minha evolução na construção de páginas e aplicações front-end.
+O objetivo do `DS-WEB` é **documentar meu aprendizado** em desenvolvimento web e registrar minha evolução na construção de páginas e aplicações.
 
 ---
 
