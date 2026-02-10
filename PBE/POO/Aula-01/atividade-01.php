@@ -8,6 +8,7 @@ class Garrafinha {
     public $capacidade;
     public $marca;
 
+    // Construtores em Php utilizam o nome de __construct
     public function __construct($cor, $tamanho, $forma, $capacidade, $marca) {
         $this->cor = $cor;
         $this->tamanho = $tamanho;
@@ -195,7 +196,6 @@ echo $minhaGarrafinha->encherDeAgua();
 $nossaGarrafinha = new Garrafinha("laranja", 15, "Cilindro", 5000, "Crystal");
 echo $minhaGarrafinha->esvaziar();
 
-
 // ------------------------------ BOLA ------------------------------
 
 echo "<h2>Instanciando Bola</h2>";
@@ -247,4 +247,5 @@ echo $seuCaderno->escrever();
 
 $nossoCaderno = new Caderno("couro", 150, "animal", "A4", "espiral");
 echo $nossoCaderno->folhar();
+
 ?>
