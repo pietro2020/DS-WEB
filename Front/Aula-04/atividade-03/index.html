@@ -110,52 +110,54 @@
 </head>
 <body>
     <section class="cadastro">
-        <h2>Cadastro</h2>
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" aria-describedby="helpName" placeholder="Ex: Pietro Melaré">
-        <small id="helpName">Digite seu nome completo!</small>
+        <form>
+            <h2>Cadastro</h2>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" aria-describedby="helpName" placeholder="Ex: Pietro Melaré">
+            <small id="helpName">Digite seu nome completo!</small>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" aria-describedby="helpEmail" placeholder="Ex: pietro.vono@email.exemplo.br">
-        <small id="helpEmail">Digite seu email educacional</small>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" aria-describedby="helpEmail" placeholder="Ex: pietro.vono@email.exemplo.br">
+            <small id="helpEmail">Digite seu email educacional</small>
 
-        <label for="ra">RA:</label>
-        <input type="number" name="ra" id="ra" aria-describedby="helpRa" placeholder="Ex: 123456">
-        <small id="helpRa">digite seu RA sem pontuação</small>
+            <label for="ra">RA:</label>
+            <input type="number" name="ra" id="ra" aria-describedby="helpRa" placeholder="Ex: 123456">
+            <small id="helpRa">digite seu RA sem pontuação</small>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" name="telefone" id="telefone" aria-describedby="helpTelefone" placeholder="Ex: 99999-9999">
-        <small id="helpTelefone">Digite seu telefone sem parenteses ou traços</small>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" aria-describedby="helpTelefone" placeholder="Ex: 99999-9999">
+            <small id="helpTelefone">Digite seu telefone sem parenteses ou traços</small>
 
-        <label for="turmas">Turmas:</label>
-        <select name="turmas" id="turmas" aria-describedby="helpTurma">
-            <option value="1° ano A">1° ano A FUND.</option>
-            <option value="1° ano B">1° ano B FUND.</option>
-            <option value="2° ano A">2° ano A FUND.</option>
-            <option value="2° ano B">2° ano B FUND.</option>
-            <option value="3° ano A">3° ano A FUND.</option>
-            <option value="3° ano B">3° ano B FUND.</option>
-            <option value="4° ano A">4° ano A FUND.</option>
-            <option value="4° ano B">4° ano B FUND.</option>
-            <option value="5° ano A">5° ano A FUND.</option>
-            <option value="5° ano B">5° ano B FUND.</option>
-            <option value="6° ano A">6° ano A FUND.</option>
-            <option value="6° ano B">6° ano B FUND.</option>
-            <option value="7° ano A">7° ano A FUND.</option>
-            <option value="7° ano B">7° ano B FUND.</option>
-            <option value="8° ano A">8° ano A FUND.</option>
-            <option value="8° ano B">8° ano B FUND.</option>
-            <option value="9° ano A">9° ano A FUND.</option>
-            <option value="9° ano B">9° ano B FUND.</option>
-            <option value="1° ano A EM">1° ano A E.M</option>
-            <option value="1° ano B EM">1° ano B E.M</option>
-            <option value="2° ano A EM">2° ano A E.M</option>
-            <option value="2° ano B EM">2° ano B E.M</option>
-            <option value="3° ano A EM">3° ano A E.M</option>
-            <option value="3° ano B EM">3° ano B E.M</option>
-        </select>
-        <small id="helpTurma">Escolha sua série e turma</small>
-        <button type="submit" onclick="cadastraAluno()  ">Cadastrar</button>
+            <label for="turmas">Turmas:</label>
+            <select name="turmas" id="turmas" aria-describedby="helpTurma">
+                <option value="1° ano A">1° ano A FUND.</option>
+                <option value="1° ano B">1° ano B FUND.</option>
+                <option value="2° ano A">2° ano A FUND.</option>
+                <option value="2° ano B">2° ano B FUND.</option>
+                <option value="3° ano A">3° ano A FUND.</option>
+                <option value="3° ano B">3° ano B FUND.</option>
+                <option value="4° ano A">4° ano A FUND.</option>
+                <option value="4° ano B">4° ano B FUND.</option>
+                <option value="5° ano A">5° ano A FUND.</option>
+                <option value="5° ano B">5° ano B FUND.</option>
+                <option value="6° ano A">6° ano A FUND.</option>
+                <option value="6° ano B">6° ano B FUND.</option>
+                <option value="7° ano A">7° ano A FUND.</option>
+                <option value="7° ano B">7° ano B FUND.</option>
+                <option value="8° ano A">8° ano A FUND.</option>
+                <option value="8° ano B">8° ano B FUND.</option>
+                <option value="9° ano A">9° ano A FUND.</option>
+                <option value="9° ano B">9° ano B FUND.</option>
+                <option value="1° ano A EM">1° ano A E.M</option>
+                <option value="1° ano B EM">1° ano B E.M</option>
+                <option value="2° ano A EM">2° ano A E.M</option>
+                <option value="2° ano B EM">2° ano B E.M</option>
+                <option value="3° ano A EM">3° ano A E.M</option>
+                <option value="3° ano B EM">3° ano B E.M</option>
+            </select>
+            <small id="helpTurma">Escolha sua série e turma</small>
+            <button type="button" onclick="cadastraAluno()">Cadastrar</button>
+        </form>
     </section>
 
     <section class="lista" id="lista">
