@@ -82,24 +82,25 @@
         }
 
         .lista li {
-            box-sizing: border-box;
             list-style: none;
             background-color: white;
-            padding: 20px 20px 10px 20px;
+            padding: 15px 20px;
             margin-bottom: 10px;
             border-radius: 8px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             font-size: 14px;
+
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            justify-content: space-between; /* separa dados e botão */
+            align-items: center; /* alinha verticalmente */
         }
 
         .lista li button {
             width: auto;
             background-color: #e74a3b;
             padding: 7px 13px;
-            font-size: 15px;
+            font-size: 14px;
+            margin: 0; /* remove margens que jogam ele pra baixo */
         }
 
         .lista li button:hover {
