@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Piano JS</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        .piano {
+            display: flex;
+            position: relative;
+        }
+
+        .branca {
+            width: 60px;
+            height: 200px;
+            background: white;
+            border: 1px solid black;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preta {
+            width: 40px;
+            height: 120px;
+            background: black;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .texto {
+            border-radius: 15px;
+            height: 60px;
+            width: 300px;
+            margin-top: 20px;
+            font-size: 40px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="piano">
+        <div class="tecla branca" id="C1"></div>
+        <div class="tecla branca" id="D1"></div>
+        <div class="tecla branca" id="E1"></div>
+        <div class="tecla branca" id="F1"></div>
+        <div class="tecla branca" id="G1"></div>
+        <div class="tecla branca" id="A1"></div>
+        <div class="tecla branca" id="B1"></div>
+
+        <div class="tecla preta" style="left:45px" id="C#1"></div>
+        <div class="tecla preta" style="left:105px" id="D#1"></div>
+
+        <div class="tecla preta" style="left:225px" id="F#1"></div>
+        <div class="tecla preta" style="left:285px" id="G#1"></div>
+        <div class="tecla preta" style="left:345px" id="A#1"></div>
+
+        <div class="tecla branca" id="C2"></div>
+        <div class="tecla branca" id="D2"></div>
+        <div class="tecla branca" id="E2"></div>
+        <div class="tecla branca" id="F2"></div>
+        <div class="tecla branca" id="G2"></div>
+        <div class="tecla branca" id="A2"></div>
+        <div class="tecla branca" id="B2"></div>
+
+        <div class="tecla preta" style="left:475px" id="C#2"></div>
+        <div class="tecla preta" style="left:535px" id="D#2"></div>
+
+        <div class="tecla preta" style="left:655px" id="F#2"></div>
+        <div class="tecla preta" style="left:715px" id="G#2"></div>
+        <div class="tecla preta" style="left:775px" id="A#2"></div>
+    </div>
+    <br>
+    <div class="texto" id="texto">
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
