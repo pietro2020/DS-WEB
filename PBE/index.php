@@ -10,6 +10,7 @@
     <h1>Aulas</h1>
     <main>
         <a href="/POO/">Aula de POO</a>
+        <a href="/biblioteca/public/">Biblioteca</a>
     </main>
 </body>
 </html>
