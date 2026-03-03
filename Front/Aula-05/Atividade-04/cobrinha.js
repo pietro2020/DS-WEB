@@ -1,4 +1,4 @@
-const tamanho = 20;
+let tamanho = 20;
 
 let x = 100;
 let y = 100;

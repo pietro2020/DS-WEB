@@ -18,6 +18,10 @@
         <a href="Aula-02/atividade-02/exercicio-03.php">Aula 02 - Exercício 3</a>
         <a href="Aula-02/atividade-02/exercicio-04.php">Aula 02 - Exercício 4</a>
         <a href="Aula-02/atividade-02/exercicio-05.php">Aula 02 - Exercício 5</a>
+        <a href="Aula-03/construtor.php">Aula 03 - construtores</a>
+        <a href="Aula-03/atividade-03/exercicio-01.php">Aula 03 - Atividade 01</a>
+        <a href="Aula-03/atividade-03/exercicio-02.php">Aula 03 - Atividade 02</a>
+        <a href="Aula-03/atividade-03/exercicio-03.php">Aula 03 - Atividade 03</a>
     </main>
 </body>
 </html>
