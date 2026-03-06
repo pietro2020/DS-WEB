@@ -34,6 +34,17 @@ function identificarBandeira(cartao) {
 }
 
 const regras = {
+    global: [
+        {
+            valida: (valor) => valor.length > 0,
+            mensagem: "O valor não pode estar vazio"
+        },
+        {
+            valida: (valor) => valor.length < 50,
+            mensagem: "O valor não pode ter mais que 50 dígitos"
+        }
+    ],
+
     nome: [
         {
             valida: (valor) => valor.trim().length >= 3,
@@ -166,23 +177,28 @@ const regras = {
 
 function validarCampo(nome, valor) {
 
+    let listaErros = [];
+    
     const regrasDoCampo = regras[nome];
+    const regrasGlobais = regras["global"];
+    
+    const todasAsRegras = regrasDoCampo.concat(regrasGlobais);
 
-    for (let regra of regrasDoCampo) {
+    for (let regra of todasAsRegras) {
 
         const valido = regra.valida(valor);
 
         if (!valido) {
-            return regra.mensagem;
+            listaErros.push(regra.mensagem);
         }
 
     }
 
-    return null;
+    return listaErros;
 
 }
 
-function mostrarErro(input, mensagem) {
+function mostrarErro(input, mensagens) {
     let idSpan = `erro-${input.name}`;
 
     if (input.name === "confirma_senha") {
@@ -192,29 +208,25 @@ function mostrarErro(input, mensagem) {
     const erro = document.getElementById(idSpan);
 
     if (erro) {
-        erro.innerText += mensagem;
+        mensagens.forEach(mensagem => {
+            erro.innerHTML += `${mensagem}<br>`;
+        })
     }
 }
 
-function limparErro(input) {
+function limparErros() {
+    const erros = document.querySelectorAll("span[id^='erro-']");
 
-    let idSpan = `erro-${input.name}`;
-
-    if (input.name === "confirma_senha") {
-        idSpan = "erro-senha";
-    }
-
-    const erro = document.getElementById(idSpan);
-
-    if (erro) {
-        erro.innerText = "";
-    }
-
+    erros.forEach(erro => {
+        erro.innerHTML = "";
+    });
 }
 
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
+
+    limparErros();
 
     let formValido = true;
 
@@ -227,25 +239,35 @@ form.addEventListener("submit", function (event) {
 
         const mensagemDeErro = validarCampo(nome, valor);
 
-        if (mensagemDeErro) {
+
+        if (mensagemDeErro.length > 0) {
 
             mostrarErro(input, mensagemDeErro);
             formValido = false;
 
-        } else {
-
-            limparErro(input);
-
         }
 
     });
+
 
     if (formValido) {
 
         const bandeira = identificarBandeira(document.getElementById("cartao").value);
 
         let resultado = document.getElementById("resultado");
-        resultado.innerHTML = `Formulário válido<br>Acesso concedido<br>A bandeira do cartão é ${bandeira}`;
+        resultado.innerHTML = `<h1>Formulário válido</h1><br>
+                                Acesso concedido<br>
+                                Seu nome: ${document.getElementById("nome").value}<br>
+                                Seu email: ${document.getElementById("email").value}<br>
+                                Sua senha: ${document.getElementById("senha").value}<br>
+                                Seu CPF: ${document.getElementById("cpf").value}<br>
+                                Seu telefone: ${document.getElementById("telefone").value}<br>
+                                Seu CEP: ${document.getElementById("cep").value}<br>
+                                Sua data de nascimento: ${document.getElementById("data_nascimento").value}<br>
+                                O valor: ${document.getElementById("valor").value}<br>
+                                A URL: ${document.getElementById("url").value}<br>
+                                Seu cartão: ${document.getElementById("cartao").value}<br>
+                                A bandeira do cartão é ${bandeira}`;
 
     } else {
         resultado.innerHTML = "";
