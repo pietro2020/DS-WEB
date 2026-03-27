@@ -1,0 +1,60 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2, p {
+  margin: 10px;
+}
+
+
+
+/* ========== Estilização para o Menu ========== */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+/* Estilo da Tabela */
+
+table {
+  width: 500px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f4f4f4;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid black;
+}
