@@ -14,7 +14,6 @@ async function getCategorias() {
                     <th>ID</th>
                     <th>Nomes</th>
                 </tr>`
-
     resposta.forEach(categoria => {
         tabela += `
         <tr>
