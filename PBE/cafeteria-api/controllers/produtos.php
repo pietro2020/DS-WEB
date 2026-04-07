@@ -20,12 +20,12 @@ switch($method){
     // GET /categorias/1
     // -------------------------------------------------------
     case 'GET':
-        $resultado = $database->executeQuery('SELECT * FROM categorias');
-        $categorias = $resultado->fetchAll();
+        $resultado = $database->executeQuery('SELECT produtos.*, categorias.nome AS nomeCategoria FROM produtos INNER JOIN categorias ON produtos.categoria_id = categorias.id ORDER BY produtos.id;');
+        $produtos = $resultado->fetchAll();
 
         echo json_encode([
             'status' => 'success',
-            'data'   => $categorias
+            'data'   => $produtos
         ]);
         break;
     // -------------------------------------------------------
@@ -35,24 +35,30 @@ switch($method){
     case 'POST':
         $body = json_decode(file_get_contents('php://input'), true);
         $nome = trim($body['nome']);
+        $preco = trim($body['preco']);
+        $categoria_id = trim($body['categoria_id']);
 
-        if(!$nome){
+        if(!$nome || !$preco || !$categoria_id){
             echo json_encode([
                 'status' => 'error',
-                'message' => 'Campo nome não informado'
+                'message' => 'Algum campo não informado'
             ]);
             break;
         }
         $database->executeQuery(
-            "INSERT INTO categorias (nome) VALUES (:nome)",
-            [ ':nome' => $nome ]
-        );
+            "INSERT INTO produtos (nome, preco, categoria_id, disponivel) VALUES (:nome, :preco, :categoria_id, :disponivel)",
+            [ 
+                ':nome'         => $nome, 
+                ':preco'        => $preco, 
+                ':categoria_id' => $categoria_id, 
+                ':disponivel'   => 1
+            ]);
 
         http_response_code(201);
         echo json_encode([
             'status' => 'success',
-            'message' => 'Categoria cadastrada com sucesso',
-            'idCategoria' => $database->lastInsertId()
+            'message' => 'Produto cadastrada com sucesso',
+            'idProduto' => $database->lastInsertId()
         ]);
         
         break;
@@ -71,13 +77,13 @@ switch($method){
             http_response_code(400);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Informe o id da categoria na URL.'
+                'message' => 'Informe o id do produto na URL.'
             ]);
             break;
         }
  
         $stmt = $database->executeQuery(
-            'DELETE FROM categorias WHERE id = :id',
+            'DELETE FROM produtos WHERE id = :id',
             [':id' => $id]
         );
  
@@ -85,14 +91,14 @@ switch($method){
             http_response_code(404);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Categoria não encontrada.'
+                'message' => 'Produto não encontrado.'
             ]);
             break;
         }
  
         echo json_encode([
             'status'  => 'success',
-            'message' => 'Categoria removida com sucesso.'
+            'message' => 'Produto removido com sucesso.'
         ]);
         break;
     // -------------------------------------------------------

@@ -20,12 +20,18 @@ switch($method){
     // GET /categorias/1
     // -------------------------------------------------------
     case 'GET':
-        $resultado = $database->executeQuery('SELECT * FROM categorias');
-        $categorias = $resultado->fetchAll();
+        if(!$id) {
+            $resultado = $database->executeQuery('SELECT * FROM pedidos');
+        } else {
+            $resultado = $database->executeQuery('SELECT * FROM pedidos WHERE id = :id',
+                [':id' => $id]
+            );
+        }
+        $pedidos = $resultado->fetchAll();
 
         echo json_encode([
             'status' => 'success',
-            'data'   => $categorias
+            'data'   => $pedidos
         ]);
         break;
     // -------------------------------------------------------
@@ -44,15 +50,15 @@ switch($method){
             break;
         }
         $database->executeQuery(
-            "INSERT INTO categorias (nome) VALUES (:nome)",
-            [ ':nome' => $nome ]
+            "INSERT INTO pedidos (cliente) VALUES (:cliente)",
+            [ ':cliente' => $nome ]
         );
 
         http_response_code(201);
         echo json_encode([
             'status' => 'success',
-            'message' => 'Categoria cadastrada com sucesso',
-            'idCategoria' => $database->lastInsertId()
+            'message' => 'Pedido cadastrado com sucesso',
+            'idPedido' => $database->lastInsertId()
         ]);
         
         break;
@@ -71,13 +77,13 @@ switch($method){
             http_response_code(400);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Informe o id da categoria na URL.'
+                'message' => 'Informe o id do Pedido na URL.'
             ]);
             break;
         }
  
         $stmt = $database->executeQuery(
-            'DELETE FROM categorias WHERE id = :id',
+            'DELETE FROM pedidos WHERE id = :id',
             [':id' => $id]
         );
  
@@ -85,14 +91,14 @@ switch($method){
             http_response_code(404);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Categoria não encontrada.'
+                'message' => 'Pedido não encontrado.'
             ]);
             break;
         }
  
         echo json_encode([
             'status'  => 'success',
-            'message' => 'Categoria removida com sucesso.'
+            'message' => 'Pedido removido com sucesso.'
         ]);
         break;
     // -------------------------------------------------------
