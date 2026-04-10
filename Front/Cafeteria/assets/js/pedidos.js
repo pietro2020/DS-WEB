@@ -3,11 +3,11 @@ var divResposta = document.getElementById("resposta")
 
 var inputNome = document.getElementById("nome");
 
-document.addEventListener('DOMContentLoaded', getCategorias)
-document.getElementById("botaoEnviar").addEventListener('click', postCategoria)
+document.addEventListener('DOMContentLoaded', getPedidos)
+document.getElementById("botaoEnviar").addEventListener('click', postPedido)
 
-async function getCategorias() {
-    var requisicao = await fetch("http://localhost/cafeteria-api/categorias")
+async function getPedidos() {
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos")
     var resposta = await requisicao.json()
 
     //console.log(resposta)
@@ -16,9 +16,12 @@ async function getCategorias() {
     const linhas = resposta.data.map(item => `
         <tr>
             <td>${item.id}</td>
-            <td>${item.nome}</td>
+            <td>${item.cliente}</td>
+            <td>${item.total}</td>
+            <td>${item.criado_em}</td>
             <td>
-                <button onclick="deleteCategoria(${item.id})">Deletar</button>
+                <a href="./pedido.html?id=${item.id}"><button>Visualizar</button><a>
+                <button onclick="deletePedido(${item.id})">Deletar</button>
             </td>
         </tr>
     `).join("");
@@ -28,11 +31,13 @@ async function getCategorias() {
         <table class="sua-classe">
             <thead>
                 <tr>
-                    <th colspan="3" ><center>Categorias Cadastradas</center></th>
+                    <th colspan="5" ><center>Pedidos Cadastradas</center></th>
                 </tr>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Data</th>
                     <th>Opções</th>
                 </tr>
             </thead>
@@ -43,8 +48,8 @@ async function getCategorias() {
     `;
 }
 
-async function postCategoria() {
-    var requisicao = await fetch("http://localhost/cafeteria-api/categorias", {
+async function postPedido() {
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos", {
         method:  "POST",
         body:    JSON.stringify({ nome: inputNome.value })
     })
@@ -55,17 +60,17 @@ async function postCategoria() {
     //Limpa o campo
     inputNome.value = ""
 
-    getCategorias()
+    getPedidos()
 }
 
 
-async function deleteCategoria(id) {
-    var requisicao = await fetch("http://localhost/cafeteria-api/categorias/" + id, {
+async function deletePedido(id) {
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos/" + id, {
         method: "DELETE"
     })
  
     var resposta = await requisicao.json()
     //console.log(resposta)
  
-    getCategorias()
+    getPedidos()
 }

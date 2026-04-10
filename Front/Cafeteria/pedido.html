@@ -16,9 +16,14 @@
     </ul>
 
     <div class="formulario">
-        <h3>Cadastro de Categoria</h3>
-        <label for="nome">Nome da Categoria</label>
-        <input type="text" id="nome" name="nome">
+        <h3 id="titulo"></h3>
+        <label for="produto">Produto:</label>
+        <select name="produto" id="produto">
+        
+        </select>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="0">
         <button type="button" id="botaoEnviar" class="button button-enviar">Cadastrar</button>
     </div>
 
@@ -28,5 +33,5 @@
         
     </div>
 </body>
-<script src="./assets/js/categorias.js"></script>
+<script src="./assets/js/pedido.js"></script>
 </html>
